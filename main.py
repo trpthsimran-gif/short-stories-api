@@ -297,3 +297,51 @@ def wikisource_search(q: str = Query(..., min_length=1, description="A story or 
         "wikisource_url": f"https://en.wikisource.org/wiki/{page_title.replace(' ', '_')}",
         "source": "Wikisource (live)"
     }
+
+
+@app.get("/wikisource/random", tags=["Dynamic"])
+def wikisource_random():
+    """
+    Get a REAL random story/text from Wikisource - no search term needed.
+    Unlike /wiki/random (which pulls from encyclopedia articles about any topic),
+    this pulls from Wikisource's library of actual public-domain literary texts,
+    so what you get back is genuinely story-like content, not factual articles.
+    Hit Execute again for a different random text each time.
+    """
+    random_params = {"action": "query", "list": "random", "rnnamespace": 0, "rnlimit": 1, "format": "json"}
+
+    try:
+        random_resp = requests.get(WIKISOURCE_API_URL, params=random_params, headers=WIKI_HEADERS, timeout=10)
+        random_resp.raise_for_status()
+        random_data = random_resp.json()
+    except requests.RequestException as e:
+        raise HTTPException(status_code=503, detail=f"Could not reach Wikisource: {str(e)}")
+
+    random_pages = random_data.get("query", {}).get("random", [])
+    if not random_pages:
+        raise HTTPException(status_code=503, detail="Wikisource did not return a random page")
+
+    page_title = random_pages[0]["title"]
+
+    extract_params = {"action": "query", "prop": "extracts", "explaintext": 1, "titles": page_title, "format": "json"}
+
+    try:
+        extract_resp = requests.get(WIKISOURCE_API_URL, params=extract_params, headers=WIKI_HEADERS, timeout=10)
+        extract_resp.raise_for_status()
+        extract_data = extract_resp.json()
+    except requests.RequestException as e:
+        raise HTTPException(status_code=503, detail=f"Could not fetch Wikisource content: {str(e)}")
+
+    pages = extract_data.get("query", {}).get("pages", {})
+    page_text = next(iter(pages.values()), {}).get("extract", "")
+
+    if not page_text or len(page_text.strip()) < 50:
+        raise HTTPException(status_code=404, detail=f"'{page_title}' had no usable text - try again for another random pick")
+
+    return {
+        "title": page_title,
+        "text_excerpt": page_text[:2000],
+        "full_length_chars": len(page_text),
+        "wikisource_url": f"https://en.wikisource.org/wiki/{page_title.replace(' ', '_')}",
+        "source": "Wikisource (live, random text)"
+    }
