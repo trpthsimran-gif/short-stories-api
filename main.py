@@ -302,46 +302,64 @@ def wikisource_search(q: str = Query(..., min_length=1, description="A story or 
 @app.get("/wikisource/random", tags=["Dynamic"])
 def wikisource_random():
     """
-    Get a REAL random story/text from Wikisource - no search term needed.
+    Get a REAL random short story/text from Wikisource - no search term needed.
     Unlike /wiki/random (which pulls from encyclopedia articles about any topic),
-    this pulls from Wikisource's library of actual public-domain literary texts,
-    so what you get back is genuinely story-like content, not factual articles.
+    this pulls from Wikisource's library of actual public-domain literary texts.
+    Internally retries up to 8 times to skip thin stubs, chapter fragments, or
+    index pages, so you always get back genuine, substantial story content.
     Hit Execute again for a different random text each time.
     """
-    random_params = {"action": "query", "list": "random", "rnnamespace": 0, "rnlimit": 1, "format": "json"}
+    max_attempts = 8
+    last_error = None
 
-    try:
-        random_resp = requests.get(WIKISOURCE_API_URL, params=random_params, headers=WIKI_HEADERS, timeout=10)
-        random_resp.raise_for_status()
-        random_data = random_resp.json()
-    except requests.RequestException as e:
-        raise HTTPException(status_code=503, detail=f"Could not reach Wikisource: {str(e)}")
+    for _ in range(max_attempts):
+        random_params = {"action": "query", "list": "random", "rnnamespace": 0, "rnlimit": 1, "format": "json"}
 
-    random_pages = random_data.get("query", {}).get("random", [])
-    if not random_pages:
-        raise HTTPException(status_code=503, detail="Wikisource did not return a random page")
+        try:
+            random_resp = requests.get(WIKISOURCE_API_URL, params=random_params, headers=WIKI_HEADERS, timeout=10)
+            random_resp.raise_for_status()
+            random_data = random_resp.json()
+        except requests.RequestException as e:
+            last_error = f"Could not reach Wikisource: {str(e)}"
+            continue
 
-    page_title = random_pages[0]["title"]
+        random_pages = random_data.get("query", {}).get("random", [])
+        if not random_pages:
+            last_error = "Wikisource did not return a random page"
+            continue
 
-    extract_params = {"action": "query", "prop": "extracts", "explaintext": 1, "titles": page_title, "format": "json"}
+        page_title = random_pages[0]["title"]
 
-    try:
-        extract_resp = requests.get(WIKISOURCE_API_URL, params=extract_params, headers=WIKI_HEADERS, timeout=10)
-        extract_resp.raise_for_status()
-        extract_data = extract_resp.json()
-    except requests.RequestException as e:
-        raise HTTPException(status_code=503, detail=f"Could not fetch Wikisource content: {str(e)}")
+        # Skip pages that are clearly not standalone stories (chapter fragments, indexes, disambiguation)
+        skip_markers = ["/Chapter", "/Book ", "/Part ", "(disambiguation)", "Index:", "Author:", "Portal:"]
+        if any(marker in page_title for marker in skip_markers):
+            continue
 
-    pages = extract_data.get("query", {}).get("pages", {})
-    page_text = next(iter(pages.values()), {}).get("extract", "")
+        extract_params = {"action": "query", "prop": "extracts", "explaintext": 1, "titles": page_title, "format": "json"}
 
-    if not page_text or len(page_text.strip()) < 50:
-        raise HTTPException(status_code=404, detail=f"'{page_title}' had no usable text - try again for another random pick")
+        try:
+            extract_resp = requests.get(WIKISOURCE_API_URL, params=extract_params, headers=WIKI_HEADERS, timeout=10)
+            extract_resp.raise_for_status()
+            extract_data = extract_resp.json()
+        except requests.RequestException as e:
+            last_error = f"Could not fetch Wikisource content: {str(e)}"
+            continue
 
-    return {
-        "title": page_title,
-        "text_excerpt": page_text[:2000],
-        "full_length_chars": len(page_text),
-        "wikisource_url": f"https://en.wikisource.org/wiki/{page_title.replace(' ', '_')}",
-        "source": "Wikisource (live, random text)"
-    }
+        pages = extract_data.get("query", {}).get("pages", {})
+        page_text = next(iter(pages.values()), {}).get("extract", "")
+
+        # Require substantial real content - long enough to actually be story-like, not a stub
+        if page_text and len(page_text.strip()) >= 400:
+            return {
+                "title": page_title,
+                "text_excerpt": page_text[:3000],
+                "full_length_chars": len(page_text),
+                "wikisource_url": f"https://en.wikisource.org/wiki/{page_title.replace(' ', '_')}",
+                "source": "Wikisource (live, random text)"
+            }
+        # Otherwise loop again and try another random page
+
+    raise HTTPException(
+        status_code=503,
+        detail=f"Couldn't find a substantial random story after {max_attempts} attempts - please try again. Last issue: {last_error}"
+    )
