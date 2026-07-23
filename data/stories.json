@@ -1,0 +1,800 @@
+[
+  {
+    "id": 1,
+    "title": "The Thirsty Crow",
+    "origin": "Panchatantra",
+    "moral": "Where there is a will, there is a way.",
+    "characters": [
+      "Crow"
+    ],
+    "story": "A thirsty crow flew for miles searching for water. At last it found a pot with a little water at the bottom, too low for its beak to reach. Instead of giving up, the clever crow dropped pebbles into the pot one by one. The water slowly rose, and the crow finally drank and flew away satisfied.",
+    "tags": [
+      "cleverness",
+      "perseverance",
+      "problem-solving"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "The Lion and the Mouse",
+    "origin": "Aesop's Fables",
+    "moral": "No act of kindness, however small, is ever wasted.",
+    "characters": [
+      "Lion",
+      "Mouse"
+    ],
+    "story": "A lion once spared a tiny mouse that had woken him from his sleep, letting it go instead of eating it. Days later, the lion was trapped in a hunter's net. The same mouse heard his roars, scurried over, and gnawed through the ropes, setting the great lion free.",
+    "tags": [
+      "kindness",
+      "gratitude",
+      "friendship"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "The Monkey and the Crocodile",
+    "origin": "Panchatantra",
+    "moral": "Never trust a friend who is secretly plotting against you, and always think quickly under pressure.",
+    "characters": [
+      "Monkey",
+      "Crocodile"
+    ],
+    "story": "A monkey and a crocodile became friends, and the monkey shared sweet fruits from his tree. The crocodile's wife wanted the monkey's heart, so the crocodile offered to carry him across the river. Midway, he revealed the plan. Thinking fast, the monkey said his heart was left on the tree, so the crocodile swam back, letting the monkey escape to safety.",
+    "tags": [
+      "quick-thinking",
+      "betrayal",
+      "wit"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "The Tortoise and the Hare",
+    "origin": "Aesop's Fables",
+    "moral": "Slow and steady wins the race.",
+    "characters": [
+      "Tortoise",
+      "Hare"
+    ],
+    "story": "A hare mocked a tortoise for being slow, so the tortoise challenged him to a race. Confident of victory, the hare took a nap midway. The tortoise plodded on steadily without stopping, and by the time the hare woke up, the tortoise had already crossed the finish line.",
+    "tags": [
+      "perseverance",
+      "humility",
+      "consistency"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "The Foolish Farmer and the Golden Goose",
+    "origin": "Aesop's Fables",
+    "moral": "Greed can destroy the very source of one's fortune.",
+    "characters": [
+      "Farmer",
+      "Goose"
+    ],
+    "story": "A farmer owned a goose that laid one golden egg every day. Impatient for more wealth at once, he cut the goose open expecting to find a treasure of gold inside, only to find nothing - and lost his daily golden egg forever.",
+    "tags": [
+      "greed",
+      "patience",
+      "consequences"
+    ]
+  },
+  {
+    "id": 6,
+    "title": "The Blue Jackal",
+    "origin": "Panchatantra",
+    "moral": "A false position built on deception cannot last forever.",
+    "characters": [
+      "Jackal"
+    ],
+    "story": "A jackal fell into a vat of blue dye and emerged an unusual blue color. The other animals, never having seen such a creature, made him their king. He ruled proudly until one night he heard jackals howling nearby and instinctively howled back, revealing his true identity, after which the animals chased him away.",
+    "tags": [
+      "deception",
+      "identity",
+      "pride"
+    ]
+  },
+  {
+    "id": 7,
+    "title": "The Ant and the Grasshopper",
+    "origin": "Aesop's Fables",
+    "moral": "It is wise to prepare for hard times while you can.",
+    "characters": [
+      "Ant",
+      "Grasshopper"
+    ],
+    "story": "All summer, the ant worked hard storing food while the grasshopper sang and played. When winter came, the grasshopper had nothing to eat and begged the ant for food. The ant, having prepared in advance, was able to survive comfortably through the cold season.",
+    "tags": [
+      "hard work",
+      "preparation",
+      "laziness"
+    ]
+  },
+  {
+    "id": 8,
+    "title": "The Brahmin and the Mongoose",
+    "origin": "Panchatantra",
+    "moral": "Never act in haste or anger without knowing the full truth.",
+    "characters": [
+      "Brahmin's wife",
+      "Mongoose",
+      "Snake"
+    ],
+    "story": "A woman left her pet mongoose to guard her baby while she went out. A snake approached the cradle, and the mongoose fought and killed it to protect the child. When the woman returned and saw blood on the mongoose's mouth, she assumed it had hurt her baby and killed it in anger - only to find her baby safe and the dead snake nearby, realizing her fatal mistake.",
+    "tags": [
+      "haste",
+      "regret",
+      "loyalty"
+    ]
+  },
+  {
+    "id": 9,
+    "title": "The Boy Who Cried Wolf",
+    "origin": "Aesop's Fables",
+    "moral": "Liars are not believed even when they tell the truth.",
+    "characters": [
+      "Shepherd Boy",
+      "Villagers"
+    ],
+    "story": "A bored shepherd boy repeatedly tricked villagers by falsely shouting that a wolf was attacking his sheep. Each time they rushed to help, only to find it was a joke. When a real wolf finally appeared, his genuine cries for help were ignored, and the flock was lost.",
+    "tags": [
+      "honesty",
+      "trust",
+      "consequences"
+    ]
+  },
+  {
+    "id": 10,
+    "title": "The Elephant and the Tailor",
+    "origin": "Panchatantra",
+    "moral": "Kindness is repaid with kindness, and cruelty with cruelty.",
+    "characters": [
+      "Elephant",
+      "Tailor"
+    ],
+    "story": "A kind tailor used to feed an elephant fruits daily as it passed his shop. One day a new tailor pricked the elephant's trunk with a needle for fun. The elephant later filled its trunk with dirty water and sprayed the cruel tailor, teaching him a lesson while still being gentle with the kind one.",
+    "tags": [
+      "kindness",
+      "cruelty",
+      "consequences"
+    ]
+  },
+  {
+    "id": 11,
+    "title": "The Golden Touch (King Midas)",
+    "origin": "Greek Mythology / Moral Tale",
+    "moral": "Be careful what you wish for, as not all gold is worth having.",
+    "characters": [
+      "King Midas"
+    ],
+    "story": "King Midas wished that everything he touched would turn to gold, and his wish was granted. At first delighted, he soon realized his food and even his own daughter turned to lifeless gold at his touch. Devastated, he begged to have the golden touch removed, learning that some things matter more than wealth.",
+    "tags": [
+      "greed",
+      "wishes",
+      "wealth"
+    ]
+  },
+  {
+    "id": 12,
+    "title": "The Wise Old Owl and the Young Sparrows",
+    "origin": "Folk Tale",
+    "moral": "It is better to act early than to regret later.",
+    "characters": [
+      "Owl",
+      "Sparrows"
+    ],
+    "story": "An old owl warned young sparrows that an oak sapling growing nearby would one day be used to make glue and traps for birds, and advised them to destroy it while it was small. The sparrows laughed off the warning. Years later, hunters used that same tree's sap to trap many of them, and they finally understood the owl's wisdom.",
+    "tags": [
+      "foresight",
+      "wisdom",
+      "regret"
+    ]
+  },
+  {
+    "id": 13,
+    "title": "The Camel and the Tent",
+    "origin": "Folk Tale",
+    "moral": "Small compromises can lead to being completely overtaken.",
+    "characters": [
+      "Camel",
+      "Merchant"
+    ],
+    "story": "A camel asked its owner if it could just poke its nose into the warm tent during a cold night. The kind owner agreed. Slowly, the camel pushed in its neck, then legs, then its whole body - until the owner found himself pushed outside his own tent in the cold.",
+    "tags": [
+      "boundaries",
+      "caution",
+      "gradual loss"
+    ]
+  },
+  {
+    "id": 14,
+    "title": "The Fox and the Grapes",
+    "origin": "Aesop's Fables",
+    "moral": "It is easy to despise what you cannot have.",
+    "characters": [
+      "Fox"
+    ],
+    "story": "A hungry fox saw a bunch of juicy grapes hanging high on a vine and tried many times to jump and reach them, but failed each time. Finally giving up, the fox walked away muttering that the grapes were probably sour anyway and not worth eating.",
+    "tags": [
+      "pride",
+      "self-deception",
+      "envy"
+    ]
+  },
+  {
+    "id": 15,
+    "title": "The Merchant's Salt and the Donkey",
+    "origin": "Panchatantra",
+    "moral": "The same trick does not work in every situation.",
+    "characters": [
+      "Donkey",
+      "Merchant"
+    ],
+    "story": "A donkey carrying sacks of salt fell into a stream and found the salt dissolved, making his load lighter, so he began falling deliberately every time to lessen his burden. One day the merchant loaded him with cotton instead. When the donkey fell as usual, the cotton absorbed water and became far heavier, teaching him a hard lesson.",
+    "tags": [
+      "overconfidence",
+      "adaptability",
+      "lessons"
+    ]
+  },
+  {
+    "id": 16,
+    "title": "The Two Friends and the Bear",
+    "origin": "Aesop's Fables",
+    "moral": "A true friend does not abandon another in times of danger.",
+    "characters": [
+      "Two Friends",
+      "Bear"
+    ],
+    "story": "Two friends traveling through a forest encountered a bear. One quickly climbed a tree to save himself, leaving the other behind. The second man lay still, pretending to be dead, since bears avoid corpses. The bear sniffed him and left. Afterward, the first friend asked what the bear had whispered - the man replied that it warned him never to trust a friend who abandons you in danger.",
+    "tags": [
+      "friendship",
+      "loyalty",
+      "trust"
+    ]
+  },
+  {
+    "id": 17,
+    "title": "The Farmer's Sons and the Bundle of Sticks",
+    "origin": "Aesop's Fables",
+    "moral": "Unity gives strength.",
+    "characters": [
+      "Farmer",
+      "Sons"
+    ],
+    "story": "An old farmer's sons quarreled constantly. To teach them a lesson, he gave them a bundle of sticks tied together and asked them to break it - none could. He then untied the bundle and gave them one stick each, which they broke easily, showing that unity made them strong while division made them weak.",
+    "tags": [
+      "unity",
+      "family",
+      "strength"
+    ]
+  },
+  {
+    "id": 18,
+    "title": "The Milkmaid and Her Pail",
+    "origin": "Aesop's Fables",
+    "moral": "Do not count your chickens before they hatch.",
+    "characters": [
+      "Milkmaid"
+    ],
+    "story": "A milkmaid walked to market balancing a pail of milk on her head, daydreaming about selling it, buying eggs, raising chickens, and becoming rich enough to marry well. Lost in her fantasies, she tossed her head proudly and spilled all the milk, losing everything she had imagined.",
+    "tags": [
+      "daydreaming",
+      "planning",
+      "reality"
+    ]
+  },
+  {
+    "id": 19,
+    "title": "The Clever Rabbit and the Lion",
+    "origin": "Panchatantra",
+    "moral": "Wit can overcome even the mightiest strength.",
+    "characters": [
+      "Rabbit",
+      "Lion"
+    ],
+    "story": "A tyrant lion demanded one animal be sent to him daily as food. When it was the rabbit's turn, he arrived late and told the lion another lion lived in a nearby well and had threatened him. Furious, the lion demanded to see this rival. The rabbit led him to the well, and the lion, seeing his own reflection, leapt in to attack it and drowned.",
+    "tags": [
+      "wit",
+      "cleverness",
+      "courage"
+    ]
+  },
+  {
+    "id": 20,
+    "title": "The Farmer and the Snake",
+    "origin": "Aesop's Fables",
+    "moral": "Some natures cannot be changed no matter how much kindness is shown.",
+    "characters": [
+      "Farmer",
+      "Snake"
+    ],
+    "story": "On a freezing day, a farmer found a snake nearly frozen to death and, taking pity, warmed it against his chest. As the snake revived, it bit him with its venomous fangs. As he lay dying, the farmer realized that he had brought his fate upon himself by trying to save a creature that was dangerous by nature.",
+    "tags": [
+      "trust",
+      "nature",
+      "caution"
+    ]
+  },
+  {
+    "id": 21,
+    "title": "The Goose That Laid Silver Eggs",
+    "origin": "Folk Tale",
+    "moral": "Contentment with what you have is true wealth.",
+    "characters": [
+      "Poor Farmer",
+      "Goose"
+    ],
+    "story": "A poor farmer found a goose that laid one silver egg every morning, which slowly made him comfortable. His neighbor, jealous and impatient, tried to steal the goose to get all the silver at once, but the goose refused to lay for him and eventually stopped laying altogether, leaving him with nothing.",
+    "tags": [
+      "contentment",
+      "greed",
+      "patience"
+    ]
+  },
+  {
+    "id": 22,
+    "title": "The Wolf in Sheep's Clothing",
+    "origin": "Aesop's Fables",
+    "moral": "Appearances can be deceiving.",
+    "characters": [
+      "Wolf",
+      "Sheep",
+      "Shepherd"
+    ],
+    "story": "A wolf disguised himself in a sheepskin to sneak into a flock undetected. Fooling the shepherd, he grazed alongside the sheep each day, picking off a lamb whenever he pleased, until one night the shepherd accidentally slaughtered him for dinner, mistaking him for an ordinary sheep.",
+    "tags": [
+      "deception",
+      "disguise",
+      "consequences"
+    ]
+  },
+  {
+    "id": 23,
+    "title": "The Jackal and the Drum",
+    "origin": "Panchatantra",
+    "moral": "Do not be afraid of things you do not understand until you investigate them.",
+    "characters": [
+      "Jackal"
+    ],
+    "story": "A hungry jackal wandering through an abandoned battlefield heard a loud, rhythmic sound and fled in terror, assuming a monster was nearby. After building courage to look, he discovered it was only a drum being beaten by wind blowing through a hole, and he happily ate the leather covering.",
+    "tags": [
+      "fear",
+      "curiosity",
+      "investigation"
+    ]
+  },
+  {
+    "id": 24,
+    "title": "The Hare and the Tortoise Race Again",
+    "origin": "Folk Tale",
+    "moral": "Overconfidence can be corrected by learning from past mistakes.",
+    "characters": [
+      "Hare",
+      "Tortoise"
+    ],
+    "story": "Stung by his earlier defeat, the hare challenged the tortoise to a rematch and this time ran the entire course without stopping, winning easily. The tortoise, however, suggested a new race along a route with a river, where the hare could not swim across but the tortoise paddled through easily and won by using his own strengths.",
+    "tags": [
+      "strategy",
+      "self-awareness",
+      "competition"
+    ]
+  },
+  {
+    "id": 25,
+    "title": "The Crow and the Fox",
+    "origin": "Aesop's Fables",
+    "moral": "Do not let flattery blind you to someone's true intentions.",
+    "characters": [
+      "Crow",
+      "Fox"
+    ],
+    "story": "A crow perched on a branch holding a piece of cheese in its beak. A clever fox below praised the crow's beautiful voice and asked it to sing. Flattered, the crow opened its beak to caw, dropping the cheese straight into the fox's waiting mouth.",
+    "tags": [
+      "flattery",
+      "vanity",
+      "trickery"
+    ]
+  },
+  {
+    "id": 26,
+    "title": "The Elephant and the Blind Men",
+    "origin": "Jataka Tales",
+    "moral": "Truth can appear different depending on one's limited perspective.",
+    "characters": [
+      "Blind Men",
+      "Elephant"
+    ],
+    "story": "Several blind men were asked to describe an elephant by touching different parts of it. One who felt the trunk said it was like a snake, one who felt the ear said it was like a fan, and one who felt the leg said it was like a tree trunk. Each was partly right, yet none understood the whole truth.",
+    "tags": [
+      "perspective",
+      "wisdom",
+      "understanding"
+    ]
+  },
+  {
+    "id": 27,
+    "title": "The Ass in the Lion's Skin",
+    "origin": "Aesop's Fables",
+    "moral": "Pretending to be something you are not eventually gets exposed.",
+    "characters": [
+      "Donkey"
+    ],
+    "story": "A donkey found a lion's skin and wore it to frighten other animals, enjoying the fear and respect it commanded. One day, however, it brayed loudly out of excitement, revealing its true identity, and was chased away by animals who no longer feared it.",
+    "tags": [
+      "pretension",
+      "identity",
+      "exposure"
+    ]
+  },
+  {
+    "id": 28,
+    "title": "The Mice in Council",
+    "origin": "Aesop's Fables",
+    "moral": "A good plan is only useful if someone can actually carry it out.",
+    "characters": [
+      "Mice",
+      "Cat"
+    ],
+    "story": "A group of mice, tormented by a stealthy cat, held a meeting to solve their problem. One clever mouse suggested tying a bell around the cat's neck so they could hear it coming. All agreed it was brilliant - until an old mouse asked who among them would volunteer to actually bell the cat, and no one had an answer.",
+    "tags": [
+      "planning",
+      "practicality",
+      "courage"
+    ]
+  },
+  {
+    "id": 29,
+    "title": "The Golden Deer",
+    "origin": "Jataka Tales",
+    "moral": "True nobility means keeping one's word even at great personal cost.",
+    "characters": [
+      "Golden Deer",
+      "Hunter",
+      "King"
+    ],
+    "story": "A magical golden deer saved a drowning man from a river, only for the ungrateful man to later betray its location to the king for a reward. When the king discovered the deer's noble nature and the man's betrayal, he punished the traitor and let the golden deer live free in the forest.",
+    "tags": [
+      "gratitude",
+      "betrayal",
+      "nobility"
+    ]
+  },
+  {
+    "id": 30,
+    "title": "The Dog and Its Reflection",
+    "origin": "Aesop's Fables",
+    "moral": "Greed can cause you to lose what you already have.",
+    "characters": [
+      "Dog"
+    ],
+    "story": "A dog carrying a piece of meat crossed a bridge over a stream and saw its own reflection in the water. Believing it was another dog with a bigger piece of meat, it barked to grab that meat too, and its own piece fell into the water and was lost forever.",
+    "tags": [
+      "greed",
+      "reflection",
+      "loss"
+    ]
+  },
+  {
+    "id": 31,
+    "title": "The Woodcutter and the Golden Axe",
+    "origin": "Aesop's Fables",
+    "moral": "Honesty is always rewarded, while greed is punished.",
+    "characters": [
+      "Woodcutter",
+      "River Spirit"
+    ],
+    "story": "A poor woodcutter accidentally dropped his axe into a river. A spirit emerged and offered him a golden axe, then a silver one, but he honestly said neither was his. Impressed by his honesty, the spirit gave him his own axe back along with the golden and silver ones as a reward.",
+    "tags": [
+      "honesty",
+      "reward",
+      "integrity"
+    ]
+  },
+  {
+    "id": 32,
+    "title": "The Tiger and the Traveler",
+    "origin": "Panchatantra",
+    "moral": "Kindness should not blind you to real danger.",
+    "characters": [
+      "Tiger",
+      "Traveler",
+      "Jackal"
+    ],
+    "story": "A tiger trapped in a cage begged a passing traveler to free him, promising not to harm him. Once freed, the tiger threatened to eat him instead. A clever jackal, asked to settle the dispute, pretended to be confused about how the tiger fit in the cage, tricking the tiger back inside and saving the traveler.",
+    "tags": [
+      "gratitude",
+      "danger",
+      "cleverness"
+    ]
+  },
+  {
+    "id": 33,
+    "title": "The North Wind and the Sun",
+    "origin": "Aesop's Fables",
+    "moral": "Gentle persuasion often works better than force.",
+    "characters": [
+      "North Wind",
+      "Sun",
+      "Traveler"
+    ],
+    "story": "The North Wind and the Sun argued over who was stronger, and agreed that whoever could make a traveler remove his coat would win. The wind blew fiercely, but the man only pulled his coat tighter. The sun then shone warmly, and the man soon took his coat off willingly.",
+    "tags": [
+      "persuasion",
+      "gentleness",
+      "strength"
+    ]
+  },
+  {
+    "id": 34,
+    "title": "The Monkey and the Wedge",
+    "origin": "Panchatantra",
+    "moral": "Do not meddle in matters you do not understand.",
+    "characters": [
+      "Monkey",
+      "Carpenters"
+    ],
+    "story": "Some carpenters left a half-split log with a wedge in it while on a break. A curious monkey sat on the log and pulled at the wedge, causing the log to close suddenly and trap his tail, teaching him a painful lesson about meddling with things he didn't understand.",
+    "tags": [
+      "curiosity",
+      "meddling",
+      "consequences"
+    ]
+  },
+  {
+    "id": 35,
+    "title": "The Peacock and the Crane",
+    "origin": "Panchatantra",
+    "moral": "True worth is shown by actions, not appearances.",
+    "characters": [
+      "Peacock",
+      "Crane"
+    ],
+    "story": "A vain peacock mocked a crane for its dull grey feathers, boasting about his own colorful tail and ability to dance beautifully. The crane calmly replied that while he could not dance, he could fly high into the clouds, something the peacock's heavy tail would never allow, and flew away gracefully.",
+    "tags": [
+      "vanity",
+      "humility",
+      "true worth"
+    ]
+  },
+  {
+    "id": 36,
+    "title": "The Old Man and His Sons",
+    "origin": "Folk Tale",
+    "moral": "There is strength in unity and cooperation.",
+    "characters": [
+      "Old Man",
+      "Sons"
+    ],
+    "story": "An old man on his deathbed called his quarreling sons and gave them each a single arrow to break, which they did easily. He then gave them a bundle of arrows tied together, which none could break, showing them that together they would remain strong, but divided they would be easily destroyed.",
+    "tags": [
+      "unity",
+      "family",
+      "cooperation"
+    ]
+  },
+  {
+    "id": 37,
+    "title": "The Fisherman and His Wife",
+    "origin": "Folk Tale",
+    "moral": "Endless greed leads back to where one started, or worse.",
+    "characters": [
+      "Fisherman",
+      "Wife",
+      "Magic Fish"
+    ],
+    "story": "A fisherman caught a magic fish that granted wishes in exchange for its freedom. His wife kept demanding more - a bigger house, then riches, then to become a queen, then to control the sun and moon. Furious at her final demand, the fish took back everything, and the couple found themselves back in their original poor hut.",
+    "tags": [
+      "greed",
+      "wishes",
+      "consequences"
+    ]
+  },
+  {
+    "id": 38,
+    "title": "The Stag at the Pool",
+    "origin": "Aesop's Fables",
+    "moral": "What we consider our flaws may sometimes save us, and what we're proud of may fail us.",
+    "characters": [
+      "Stag"
+    ],
+    "story": "A stag admiring his reflection at a pool praised his magnificent antlers but was ashamed of his thin legs. When hunters and hounds approached, his despised legs carried him swiftly through open ground, but his prized antlers got tangled in the forest branches, nearly costing him his life.",
+    "tags": [
+      "appearance",
+      "self-perception",
+      "irony"
+    ]
+  },
+  {
+    "id": 39,
+    "title": "The Bird with Two Heads",
+    "origin": "Jataka Tales",
+    "moral": "Selfishness and lack of cooperation can bring ruin to both sides.",
+    "characters": [
+      "Two-Headed Bird"
+    ],
+    "story": "A bird with two heads shared one body but each head ate separately. One head, out of jealousy, ate a poisonous fruit just to spite the other, not realizing the poison would travel through their shared body and kill them both.",
+    "tags": [
+      "cooperation",
+      "jealousy",
+      "unity"
+    ]
+  },
+  {
+    "id": 40,
+    "title": "The Frog and the Ox",
+    "origin": "Aesop's Fables",
+    "moral": "Trying to be something you are not can lead to your own downfall.",
+    "characters": [
+      "Frog",
+      "Ox"
+    ],
+    "story": "A small frog, jealous of a huge ox grazing nearby, tried puffing herself up to match its size, asking her children each time if she was big enough yet. She kept inflating herself further out of pride until she finally burst.",
+    "tags": [
+      "envy",
+      "pride",
+      "self-destruction"
+    ]
+  },
+  {
+    "id": 41,
+    "title": "The Honest Woodsman's Test",
+    "origin": "Panchatantra",
+    "moral": "Wisdom lies in seeing beyond the surface of a problem.",
+    "characters": [
+      "Woodsman",
+      "Merchant"
+    ],
+    "story": "A merchant left a bag of gold with a woodsman for safekeeping and later falsely claimed part of it was missing to cheat him. A wise judge listened to both sides, then set a clever test involving unrelated riddles that revealed the merchant's greed and lies, restoring the woodsman's honest reputation.",
+    "tags": [
+      "honesty",
+      "justice",
+      "wisdom"
+    ]
+  },
+  {
+    "id": 42,
+    "title": "The Miser and His Gold",
+    "origin": "Aesop's Fables",
+    "moral": "Wealth has value only when it is used, not merely hoarded.",
+    "characters": [
+      "Miser"
+    ],
+    "story": "A miser buried all his gold under a tree and visited it daily just to look at it, never spending a coin. A thief who noticed his visits dug up and stole the gold. When the miser wept over the empty hole, a neighbor told him to simply visit the empty hole daily instead, since he never used the gold anyway.",
+    "tags": [
+      "greed",
+      "wealth",
+      "hoarding"
+    ]
+  },
+  {
+    "id": 43,
+    "title": "The Lion, the Bear, and the Fox",
+    "origin": "Folk Tale",
+    "moral": "Sometimes the wisest choice is to let others exhaust themselves while you wait patiently.",
+    "characters": [
+      "Lion",
+      "Bear",
+      "Fox"
+    ],
+    "story": "A lion and a bear fought fiercely over a piece of prey until both were too exhausted and wounded to move. A clever fox, who had watched the whole battle from a distance without joining in, simply walked up and carried the prey away while the two rivals lay helpless.",
+    "tags": [
+      "patience",
+      "strategy",
+      "opportunity"
+    ]
+  },
+  {
+    "id": 44,
+    "title": "The Farmer and the Stork",
+    "origin": "Aesop's Fables",
+    "moral": "You are judged by the company you keep.",
+    "characters": [
+      "Farmer",
+      "Crane",
+      "Stork"
+    ],
+    "story": "A farmer set traps for cranes that were destroying his crops and caught a stork among them, who pleaded innocence since he did not eat crops. The farmer replied that since the stork was found among the guilty birds, he must share their punishment as well.",
+    "tags": [
+      "association",
+      "reputation",
+      "judgment"
+    ]
+  },
+  {
+    "id": 45,
+    "title": "The Sparrow and the Elephant",
+    "origin": "Panchatantra",
+    "moral": "Even the smallest creature can defeat a much larger enemy through unity and wit.",
+    "characters": [
+      "Sparrow",
+      "Elephant",
+      "Crow",
+      "Frog"
+    ],
+    "story": "A rogue elephant destroyed a sparrow's nest and killed her young ones. With the help of her friends - a crow who pecked its eyes, a fly who laid eggs in its ears, and a frog who lured it to a pit by croaking - the small creatures together brought down the mighty elephant.",
+    "tags": [
+      "unity",
+      "wit",
+      "revenge"
+    ]
+  },
+  {
+    "id": 46,
+    "title": "The Boy and the Filberts",
+    "origin": "Aesop's Fables",
+    "moral": "Do not try to grasp more than you can handle at once.",
+    "characters": [
+      "Boy"
+    ],
+    "story": "A boy put his hand into a jar of filberts and grabbed as many as his fist could hold, but then found his hand too full to pull back out through the narrow neck. Refusing to let go of any nuts, he began crying in frustration, until someone advised him to take just half as many so his hand could slip free.",
+    "tags": [
+      "greed",
+      "moderation",
+      "self-control"
+    ]
+  },
+  {
+    "id": 47,
+    "title": "The Ungrateful Snake",
+    "origin": "Panchatantra",
+    "moral": "Some creatures cannot be trusted no matter how much good you do for them.",
+    "characters": [
+      "Farmer's Son",
+      "Snake"
+    ],
+    "story": "A farmer's son used to leave milk daily near a snake's hole out of respect, and the snake in return left a gold coin each day. One day, greedy for more, the boy tried to kill the snake to take all its gold at once, but the snake escaped and never returned, leaving him without any future gifts.",
+    "tags": [
+      "greed",
+      "trust",
+      "consequences"
+    ]
+  },
+  {
+    "id": 48,
+    "title": "The Wise Minister and the Foolish King",
+    "origin": "Folk Tale",
+    "moral": "True wisdom means telling hard truths, not just pleasing words.",
+    "characters": [
+      "King",
+      "Minister"
+    ],
+    "story": "A king asked his court which of his qualities made him a great ruler, and most flattered him with false praise. One wise minister honestly said the king's greatest strength was that he listened to advice, even when it was uncomfortable, which the king came to realize was the truest and most valuable compliment of all.",
+    "tags": [
+      "honesty",
+      "wisdom",
+      "leadership"
+    ]
+  },
+  {
+    "id": 49,
+    "title": "The Camel's Complaint",
+    "origin": "Folk Tale",
+    "moral": "Be grateful for what you have, as others' burdens may be greater than they appear.",
+    "characters": [
+      "Camel",
+      "Donkey"
+    ],
+    "story": "A camel constantly complained about its long neck and humped back to a donkey who carried much heavier loads without a word. When a sandstorm hit, the camel's features that it once despised - its long eyelashes, nostrils that closed, and humps storing fat - allowed it to survive easily, while the donkey struggled.",
+    "tags": [
+      "gratitude",
+      "self-acceptance",
+      "perspective"
+    ]
+  },
+  {
+    "id": 50,
+    "title": "The Two Pots",
+    "origin": "Aesop's Fables",
+    "moral": "Unequal partnerships between the strong and the weak rarely end well for the weaker one.",
+    "characters": [
+      "Brass Pot",
+      "Clay Pot"
+    ],
+    "story": "A brass pot and a clay pot were swept along together in a flood. The brass pot promised to protect the clay pot by staying close, but every time the current pushed them together, the brass pot's hardness cracked the fragile clay one, until nothing was left of it by the journey's end.",
+    "tags": [
+      "inequality",
+      "caution",
+      "vulnerability"
+    ]
+  }
+]
