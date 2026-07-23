@@ -6,6 +6,7 @@ A REST API serving Panchatantra-style and classic moral short stories.
 import json
 import random
 import re
+import time
 from pathlib import Path
 from typing import Optional
 
@@ -201,48 +202,53 @@ def wikisource_random():
     Get a REAL random short story/text from Wikisource - no search term needed.
     Unlike /wiki/random (which pulls from encyclopedia articles about any topic),
     this pulls from Wikisource's library of actual public-domain literary texts.
-    Internally retries up to 8 times to skip thin stubs, chapter fragments, or
-    index pages, so you always get back genuine, substantial story content.
+    Internally retries a few times to skip thin stubs, chapter fragments, or
+    index pages, so you usually get back genuine, substantial story content.
     Hit Execute again for a different random text each time.
     """
-    max_attempts = 8
+    max_attempts = 5
     last_error = None
 
-    for _ in range(max_attempts):
-        random_params = {"action": "query", "list": "random", "rnnamespace": 0, "rnlimit": 1, "format": "json"}
+    for attempt in range(max_attempts):
+        # Combine the "get a random page" and "get its text" into ONE request
+        # using a generator, instead of two separate calls - this avoids
+        # hitting Wikisource's rate limit on rapid repeated requests.
+        combined_params = {
+            "action": "query",
+            "generator": "random",
+            "grnnamespace": 0,
+            "grnlimit": 1,
+            "prop": "extracts",
+            "explaintext": 1,
+            "format": "json"
+        }
 
         try:
-            random_resp = requests.get(WIKISOURCE_API_URL, params=random_params, headers=WIKI_HEADERS, timeout=10)
-            random_resp.raise_for_status()
-            random_data = random_resp.json()
+            resp = requests.get(WIKISOURCE_API_URL, params=combined_params, headers=WIKI_HEADERS, timeout=10)
+            if resp.status_code == 429:
+                last_error = "Wikisource is rate-limiting requests right now - please wait a moment and try again"
+                time.sleep(1.5)
+                continue
+            resp.raise_for_status()
+            data = resp.json()
         except requests.RequestException as e:
             last_error = f"Could not reach Wikisource: {str(e)}"
+            time.sleep(0.5)
             continue
 
-        random_pages = random_data.get("query", {}).get("random", [])
-        if not random_pages:
+        pages = data.get("query", {}).get("pages", {})
+        if not pages:
             last_error = "Wikisource did not return a random page"
             continue
 
-        page_title = random_pages[0]["title"]
+        page_data = next(iter(pages.values()))
+        page_title = page_data.get("title", "")
+        page_text = page_data.get("extract", "")
 
-        # Skip pages that are clearly not standalone stories (chapter fragments, indexes, disambiguation)
+        # Skip pages that are clearly not standalone stories
         skip_markers = ["/Chapter", "/Book ", "/Part ", "(disambiguation)", "Index:", "Author:", "Portal:"]
         if any(marker in page_title for marker in skip_markers):
             continue
-
-        extract_params = {"action": "query", "prop": "extracts", "explaintext": 1, "titles": page_title, "format": "json"}
-
-        try:
-            extract_resp = requests.get(WIKISOURCE_API_URL, params=extract_params, headers=WIKI_HEADERS, timeout=10)
-            extract_resp.raise_for_status()
-            extract_data = extract_resp.json()
-        except requests.RequestException as e:
-            last_error = f"Could not fetch Wikisource content: {str(e)}"
-            continue
-
-        pages = extract_data.get("query", {}).get("pages", {})
-        page_text = next(iter(pages.values()), {}).get("extract", "")
 
         # Require substantial real content - long enough to actually be story-like, not a stub
         if page_text and len(page_text.strip()) >= 400:
@@ -257,5 +263,5 @@ def wikisource_random():
 
     raise HTTPException(
         status_code=503,
-        detail=f"Couldn't find a substantial random story after {max_attempts} attempts - please try again. Last issue: {last_error}"
+        detail=f"Couldn't find a substantial random story after {max_attempts} attempts - please try again in a moment. Last issue: {last_error}"
     )
